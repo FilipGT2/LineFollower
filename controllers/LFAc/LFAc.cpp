@@ -60,14 +60,18 @@ double right_speed = MAX_SPEED;
     // Read the sensors:
     // Enter here functions to read sensor data, like:
     //  double val = ds->getValue();_
+    
     double left_ir_val = left_ir->getValue();
     double right_ir_val = right_ir->getValue();
+    
+    bool line_left = (4 < left_ir_val) && (left_ir_val < 15);
+    bool line_right = (4 < right_ir_val) && (right_ir_val < 15);
     
     if((left_ir_val > right_ir_val) && line_left)
     {
       left_speed = MAX_SPEED * 0.25;
     }
-    else if ((right_ir_val -> left_ir_val) && line_right)
+    else if ((right_ir_val > left_ir_val) && line_right)
     {
     right_speed = MAX_SPEED * 0.25;
     }
@@ -76,8 +80,6 @@ double right_speed = MAX_SPEED;
     left_speed = MAX_SPEED;
     right_speed = MAX_SPEED;
     
-    bool line_left = (4<left_ir_val) && (left_ir_val <15);
-    bool line_right = (4<right_ir_val) && (right_ir_val <15);
     // Enter here functions to send actuator commands, like:
     //  motor->setPosition(10.0);
     left_motor->setVelocity(left_speed);

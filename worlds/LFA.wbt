@@ -9,8 +9,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.021002095784718417 -0.04153303165673525 -0.9989163725027488 5.345827192361945
-  position -1.0197777980405447 -1.0289554643816843 0.3488234276623937
+  orientation -0.12305611355626733 -0.9607817084114665 0.24850694497009687 5.331433539224725
+  position -1.0211324936970985 0.07271867052501155 1.272951216594543
 }
 TexturedBackground {
 }
@@ -21,6 +21,7 @@ RectangleArena {
   rotation 0 0 1 3.46682e-06
   floorSize 2 1
   floorAppearance PBRAppearance {
+    transparency 1
     roughness 1
     roughnessMap ImageTexture {
       url [
@@ -41,35 +42,29 @@ RectangleArena {
   }
 }
 E-puck {
-  hidden position_0_0 7856.679024937098
-  hidden position_0_1 8848.83831788443
-  hidden linearVelocity_0 -0.05593135636638366 -2.760668468950897e-07 -4.3424879029056755e-06
-  hidden angularVelocity_0 8.029960022801253e-05 -0.0009783096770081743 0.09416121025340848
-  hidden translation_1 0 0.025999999999999995 0.02
-  hidden rotation_1 0 1 0 2.6973909626147967
-  hidden linearVelocity_1 -0.05349265942790822 -0.00016331500825535856 -7.95525885489493e-06
-  hidden angularVelocity_1 -0.1776534971344706 -2.663143017392707 0.09156544474121339
-  hidden translation_2 0 -0.026 0.02
-  hidden rotation_2 0 0.9999999999999999 0 2.113405375572821
-  hidden linearVelocity_2 -0.05837833901113388 0.00016295352561560315 -5.510948860100827e-07
-  hidden angularVelocity_2 -0.19562674996294963 -2.93058719788123 0.09140978225692693
-  translation 0.1498021212286787 0.4031657176199366 -5.997968065810967e-05
-  rotation -0.0004943004619856986 0.0007767104407962085 -0.9999995761938824 -3.076667622810159
+  hidden position_0_0 7856.67902491063
+  hidden position_0_1 8848.838317916468
+  hidden rotation_1 0 1 0 2.697390936146682
+  hidden rotation_2 0 1 0 2.1134054076106814
+  translation 0.0192064 -0.122633 -0.00107985
+  rotation 0.00034243522494187235 -0.0008227021533328497 0.999999602949563 3.0766663749949053
   controller "LFAc"
   groundSensorsSlot [
     DistanceSensor {
       translation 0 0.02 0
+      rotation 0 1 0 1.5708
       name "Ir1"
       type "infra-red"
     }
     DistanceSensor {
       translation 0 -0.01 0
+      rotation 0 1 0 1.5708
       name "Ir2"
       type "infra-red"
     }
   ]
 }
 TrackOne {
-  translation 0.02 -0.0075 0.0099997
+  translation 0.02 0 0.009
   rotation 1 0 0 -1.5707953071795862
 }
